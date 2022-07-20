@@ -1,0 +1,216 @@
+:root {
+  --color-blue: #023c88;
+  --color-blue-lighter-1: #00b3d6;
+  --color-blue-lighter-2: #49cae4;
+  --color-gray-light: #f9fafb;
+  --color-gray-dark: #e9ecef;
+  --section-padding: clamp(4rem, 10vw, 12rem) 0rem;
+  --two-col-layout: 2;
+  --three-col-layout: 3;
+}
+@media only screen and (max-width: 56.25em) {
+  :root {
+    --two-col-layout: 1;
+  }
+}
+@media only screen and (max-width: 59em) {
+  :root {
+    --three-col-layout: 2;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  :root {
+    --three-col-layout: 1;
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+@media only screen and (max-width: 50em) {
+  .header .nav-icon {
+    display: block;
+  }
+}
+
+.section-review {
+  background-color: var(--color-gray-light);
+  padding: var(--section-padding);
+}
+
+.review-cards {
+  display: grid;
+  grid-template-columns: repeat(
+    var(--two-col-layout),
+    minmax(-webkit-min-content, 1fr)
+  );
+  grid-template-columns: repeat(
+    var(--two-col-layout),
+    minmax(min-content, 1fr)
+  );
+  row-gap: 10rem;
+  -moz-column-gap: 5rem;
+  column-gap: 5rem;
+  justify-items: center;
+}
+
+.r-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 40rem;
+  padding: 0 2.4rem 2rem 2.4rem;
+  position: relative;
+}
+.r-card > *:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+.r-card:hover {
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+.r-card__img {
+  max-width: 100%;
+  border-radius: 50%;
+  margin-top: -5rem;
+}
+.r-card__name {
+  font-weight: 700;
+}
+.r-card__description {
+  text-align: center;
+}
+.r-card__rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quot {
+  font-size: 7rem;
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-blue);
+}
+
+.section-tours {
+  background-color: var(--color-gray-light);
+  padding: var(--section-padding);
+}
+
+.tour-box__heading {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.tour-box__cards {
+  display: grid;
+  grid-template-columns: repeat(
+    var(--three-col-layout),
+    minmax(-webkit-min-content, 1fr)
+  );
+  grid-template-columns: repeat(
+    var(--three-col-layout),
+    minmax(min-content, 1fr)
+  );
+  gap: 3rem;
+}
+
+.t-card {
+  background-color: #fff;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  color: #000;
+}
+.t-card:hover .t-card__img {
+  filter: brightness(0.8);
+}
+.t-card__img {
+  max-width: 100%;
+  height: auto;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.t-card__content {
+  padding: 2.5rem;
+}
+.t-card__content > *:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.t-card__title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid;
+}
+.t-card__description {
+  text-align: center;
+}
+.t-card__items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5rem;
+}
+.t-card__items > * {
+  padding: 0.2rem 1rem;
+  background-color: rgba(73, 202, 228, 0.7);
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
+
+/* 
+
+.t-card {
+    display: flexbox;
+    background-color: rgb(8, 8, 10);
+    box-shadow: 0px 10px 20px rgba(22, 146, 177, 0.664);
+    border-radius: 5px;
+    color: rgb(238, 227, 227);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width:60%;
+    height:15%;
+  }
+  .t-card:hover .t-card__img {
+    filter: brightness(2);
+  }
+  .t-card__img {
+    box-sizing: content-box;
+    width: 40%;
+    height: 10%;
+  }
+
+  .t-card__title {
+    text-align: center;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+  } */
+
+  h3{
+      text-align: center;
+      font-size: 45px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: rgb(206, 174, 127);
+  }
+
